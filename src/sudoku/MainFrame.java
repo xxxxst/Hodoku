@@ -394,7 +394,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 		// status line fonts are a bit larger than default in Windows LAF
 		// allow adjustments
 		font = statusLinePanel.getFont();
-		fontName = "Tahoma";
+		fontName = font.getName();
 		if (!Options.getInstance().checkFont(fontName)) {
 			fontName = font.getName();
 		}

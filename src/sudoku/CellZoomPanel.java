@@ -239,7 +239,7 @@ public class CellZoomPanel extends JPanel implements ActionListener {
 		setLayout(null);
 
 		titleLabel.setBackground(new java.awt.Color(0, 51, 255));
-		titleLabel.setFont(new java.awt.Font("Tahoma", 1, 12));
+		titleLabel.setFont(new java.awt.Font(titleLabel.getFont().getName(), 1, 12));
 		titleLabel.setForeground(new java.awt.Color(255, 255, 255));
 		titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		titleLabel.setText(bundle.getString("CellZoomPanel.titleLabel.text"));

@@ -78,7 +78,7 @@ public class AboutDialog extends javax.swing.JDialog {
 		java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("intl/AboutDialog");
 		setTitle(bundle.getString("AboutDialog.title"));
 
-		versionLabel.setFont(new java.awt.Font("Tahoma", 1, 18));
+		versionLabel.setFont(new java.awt.Font(versionLabel.getFont().getName(), 1, 18));
 		versionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		versionLabel.setText("Hodoku v1.0");
 
