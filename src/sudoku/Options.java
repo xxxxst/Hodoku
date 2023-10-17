@@ -539,12 +539,12 @@ public final class Options {
 	public static final double HINT_BACK_FACTOR = 1.6; // um wie viel der Kreis beim Hint größer ist als die Zahl
 	/** How much should the lines around the boxes be thicker than normal lines */
 	public static final double BOX_LINE_FACTOR = 1.5;
-	public static Font DEFAULT_VALUE_FONT = new Font("Tahoma", Font.PLAIN, 10); // Standard für Zellenwerte (Größe
+	public static Font DEFAULT_VALUE_FONT = new Font("simsun", Font.PLAIN, 10); // Standard für Zellenwerte (Größe
 																				// wird ignoriert)
-	public static Font DEFAULT_CANDIDATE_FONT = new Font("Tahoma", Font.PLAIN, 10); // Standard für Kandidaten (Größe
+	public static Font DEFAULT_CANDIDATE_FONT = new Font("simsun", Font.PLAIN, 10); // Standard für Kandidaten (Größe
 																					// wird ignoriert)
-	public static Font BIG_FONT = new Font("Arial", Font.BOLD, 16); // Font für Ausdruck Überschrift
-	public static Font SMALL_FONT = new Font("Arial", Font.PLAIN, 10); // Font für Ausdruck Rating
+	public static Font BIG_FONT = new Font("simsun", Font.BOLD, 16); // Font für Ausdruck Überschrift
+	public static Font SMALL_FONT = new Font("simsun", Font.PLAIN, 10); // Font für Ausdruck Rating
 	private Color gridColor = GRID_COLOR;
 	private Color innerGridColor = INNER_GRID_COLOR;
 	private Color wrongValueColor = WRONG_VALUE_COLOR;

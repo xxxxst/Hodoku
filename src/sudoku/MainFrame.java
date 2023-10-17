@@ -381,7 +381,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 		outerSplitPane.getActionMap().getParent().remove("toggleFocus");
 
 		// change hintTextArea font to a proportional font
-		String fontName = "Arial";
+		String fontName = "simsun";
 		if (!Options.getInstance().checkFont(fontName)) {
 			fontName = Font.SANS_SERIF;
 		}
@@ -1223,6 +1223,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 		hinweisTextArea.setLineWrap(true);
 		hinweisTextArea.setRows(5);
 		hinweisTextArea.setWrapStyleWord(true);
+		jScrollPane1.setFont(new Font("simsun", jScrollPane1.getFont().getStyle(), jScrollPane1.getFont().getSize()));
 		jScrollPane1.setViewportView(hinweisTextArea);
 
 		javax.swing.GroupLayout hintPanelLayout = new javax.swing.GroupLayout(hintPanel);
