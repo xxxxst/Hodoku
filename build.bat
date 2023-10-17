@@ -8,7 +8,7 @@ if not exist "out" (
 call jar -cfm out/HodokuCN.jar manifest.mf -C bin/ .
 
 set "exe=0"
-for /F %%i in ('where jsmoothcmd.exe') do (set exe=%%i)
+for /F %%i in ('where launch4jc.exe') do (set exe=%%i)
 if exist %exe% (
-	call jsmoothcmd.exe "vbuild\HodokuCN.exe.jsmooth"
+	call launch4jc.exe "vbuild\HodokuCN.launch4j.xml"
 )
