@@ -627,6 +627,8 @@ public final class Options {
 	// Singleton
 	public static Options instance = null;
 
+	public static String lastConfigFileName = "";
+
 	/** Creates a new instance of Options */
 	public Options() {
 
@@ -977,6 +979,10 @@ public final class Options {
 	}
 
 	public void writeOptions() throws FileNotFoundException {
+		if (!lastConfigFileName.equals("")) {
+			writeOptions(lastConfigFileName);
+			return;
+		}
 
 		String tmp = System.getProperty("java.io.tmpdir");
 		String fileName = null;
@@ -993,6 +999,7 @@ public final class Options {
 	}
 
 	public void writeOptions(String fileName) throws FileNotFoundException {
+		lastConfigFileName = fileName;
 		Logger.getLogger(Options.class.getName()).log(Level.INFO, "Writing options to {0}", fileName);
 		XMLEncoder out = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(fileName)));
 		out.writeObject(this);
@@ -1000,6 +1007,10 @@ public final class Options {
 	}
 
 	public static void readOptions() {
+		if (!lastConfigFileName.equals("")) {
+			readOptions(lastConfigFileName);
+			return;
+		}
 		
 		String tmp = System.getProperty("java.io.tmpdir");
 		String fileName = null;
@@ -1030,6 +1041,7 @@ public final class Options {
 			XMLDecoder in = new XMLDecoder(new BufferedInputStream(new FileInputStream(fileName)));
 			instance = (Options) in.readObject();
 			in.close();
+			lastConfigFileName = fileName;
 			
 		} catch (FileNotFoundException ex) {
 			
@@ -1037,11 +1049,11 @@ public final class Options {
 
 			instance = new Options();
 			
-			try {
-				instance.writeOptions();
-			} catch (FileNotFoundException exi) {
-				Logger.getLogger(Options.class.getName()).log(Level.SEVERE, "Error writing options", exi);
-			}
+			// try {
+			// 	instance.writeOptions();
+			// } catch (FileNotFoundException exi) {
+			// 	Logger.getLogger(Options.class.getName()).log(Level.SEVERE, "Error writing options", exi);
+			// }
 		}
 		
 		// readObject() passt nur orgSolverSteps an,

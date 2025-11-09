@@ -60,6 +60,7 @@ public class GenerateSudokuProgressDialog extends javax.swing.JDialog implements
 	public GenerateSudokuProgressDialog(java.awt.Frame parent, boolean modal, DifficultyLevel level, GameMode mode) {
 		super(parent, modal);
 		initComponents();
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(cancelButton);
 		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
 		Action escapeAction = new AbstractAction() {

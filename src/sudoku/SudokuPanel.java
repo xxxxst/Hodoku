@@ -4007,12 +4007,21 @@ public class SudokuPanel extends javax.swing.JPanel implements Printable {
 			System.err.println("Unexpected error in toggleCandidateFromCellSelection, cellSelection should not be empty.");
 			return;
 		} else {
+			boolean isSetFirst = true;
 			for (int index : cellSelection) {
 				if (sudoku.getValue(index) == 0) {
 					boolean isCandidateOn = sudoku.isCandidate(index, candidate, !showCandidates);
-					sudoku.setCandidate(index, candidate, !isCandidateOn, !showCandidates);
+					if (isCandidateOn) {
+						if (isSetFirst) {
+							undoStack.push(sudoku.clone());
+							isSetFirst = false;
+						}
+						sudoku.setCandidate(index, candidate, !isCandidateOn, !showCandidates);
+					}
 				}
 			}
+			updateCellZoomPanel();
+			mainFrame.check();
 		}
 	}
 

@@ -51,6 +51,7 @@ public class FishChooseCandidatesDialog extends javax.swing.JDialog {
 
 		setCheckBoxes(fishCandidates);
 
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(okButton);
 
 		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);

@@ -443,6 +443,10 @@ public class Main {
 			path = startURL.getPath();
 			Logger.getLogger(Main.class.getName()).log(Level.CONFIG, "Startup path: {0}", path);
 
+			String tag = ".jar!";
+			if (!path.contains(tag)) {
+				tag = ".exe!";
+			}
 			// 20120116: CAUTION - jar file might be renamed, dont rely on "hodoku.jar"!
 			if (path.contains(".jar!")) {
 
@@ -451,7 +455,7 @@ public class Main {
 					startIndex = 6;
 				}
 
-				String tmp = path.substring(startIndex, path.indexOf(".jar!"));
+				String tmp = path.substring(startIndex, path.indexOf(tag));
 				int index = tmp.lastIndexOf('/');
 				if (index > 0) {
 					path = tmp.substring(0, index);
@@ -480,6 +484,7 @@ public class Main {
 		}
 
 		File configFile = new File(path + File.separator + Options.FILE_NAME);
+		Options.lastConfigFileName = configFile.getPath();
 		boolean needToResetPuzzles = false;
 
 		if (configFile.exists()) {

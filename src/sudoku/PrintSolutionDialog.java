@@ -103,6 +103,7 @@ public class PrintSolutionDialog extends javax.swing.JDialog implements Printabl
 		super(parent, modal);
 		initComponents();
 
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(printButton);
 
 		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);

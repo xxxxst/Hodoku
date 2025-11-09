@@ -58,6 +58,7 @@ public class ConfigDialog extends javax.swing.JDialog {
 		super(parent, modal);
 		initComponents();
 
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(okButton);
 
 		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);

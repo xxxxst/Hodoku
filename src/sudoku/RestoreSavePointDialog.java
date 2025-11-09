@@ -71,6 +71,7 @@ public class RestoreSavePointDialog extends javax.swing.JDialog {
 
 		initTable();
 
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(okButton);
 
 		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);

@@ -45,6 +45,7 @@ public class SolverProgressDialog extends javax.swing.JDialog implements Runnabl
 		this.solver = solver;
 
 		initComponents();
+		setLocationRelativeTo(parent);
 		candsProgressBar.setValue(0);
 
 		thread = new Thread(this);

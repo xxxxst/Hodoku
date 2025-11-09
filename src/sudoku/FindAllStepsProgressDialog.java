@@ -54,6 +54,7 @@ public class FindAllStepsProgressDialog extends javax.swing.JDialog {
 		super(parent, modal);
 
 		initComponents();
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(abbrechenButton);
 		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
 		Action escapeAction = new AbstractAction() {

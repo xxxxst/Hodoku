@@ -59,6 +59,12 @@ public class UIQuickBrowse extends JFrame {
 		
 		initUI(400, 200);
 	}
+
+	@Override
+	public void setVisible(boolean visible) {
+		setLocationRelativeTo(mainFrame);
+		super.setVisible(visible);
+	}
 	
 	private void initUI(int w, int h) {
 		

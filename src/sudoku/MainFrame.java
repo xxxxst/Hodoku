@@ -390,16 +390,17 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 		
 		Font font = hinweisTextArea.getFont();
 
-		font = new Font(fontName, font.getStyle(), editMenu.getFont().getSize());
+		// font = new Font(fontName, font.getStyle(), editMenu.getFont().getSize());
 		hinweisTextArea.setFont(font);
 
 		// status line fonts are a bit larger than default in Windows LAF
 		// allow adjustments
 		font = statusLinePanel.getFont();
-		fontName = "Tahoma";
-		if (!Options.getInstance().checkFont(fontName)) {
-			fontName = font.getName();
-		}
+		// fontName = "Tahoma";
+		// if (!Options.getInstance().checkFont(fontName)) {
+		// 	fontName = font.getName();
+		// }
+		fontName = font.getName();
 		
 		int fontSize = 12;
 		if (font.getSize() > fontSize) {
@@ -626,7 +627,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 		});
 
 		updateCellSelectionStatus();
-		exportWindow = new UIExportLine(sudokuPanel);
+		exportWindow = new UIExportLine(this, sudokuPanel);
 		importWindow = new UIImportLine(this);
 		quickBrowseWindow = new UIQuickBrowse(this);
 	}
@@ -1413,7 +1414,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 		fileMenu.add(saveAsPictureMenuItem);
 		fileMenu.add(new javax.swing.JPopupMenu.Separator());
 		
-		quickBrowseMenuItem.setText("Quick Browse");
+		quickBrowseMenuItem.setText(bundle.getString("MainFrame.quickBrowseMenuItem.text"));
 		quickBrowseMenuItem.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				quickBrowseWindow.setVisible(true);
@@ -2683,7 +2684,7 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 	}
 
 	private void keyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {
-		new KeyboardLayoutFrame().setVisible(true);
+		new KeyboardLayoutFrame(this).setVisible(true);
 		check();
 		fixFocus();
 	}

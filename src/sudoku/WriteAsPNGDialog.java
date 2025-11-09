@@ -58,6 +58,7 @@ public class WriteAsPNGDialog extends javax.swing.JDialog {
 		super(parent, modal);
 		initComponents();
 
+		setLocationRelativeTo(parent);
 		this.aufloesung = aufloesung;
 		this.bildSize = size;
 		this.einheit = einheit;

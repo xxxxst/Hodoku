@@ -26,12 +26,14 @@ public class UIExportLine extends JFrame implements ActionListener {
 	private JTextField textField;
 	private JButton copyButton;
 	private SudokuPanel sudokuPanel;
+	private MainFrame mainFrame;
 
-	public UIExportLine(SudokuPanel sudokuPanel) {
+	public UIExportLine(MainFrame mainFrame, SudokuPanel sudokuPanel) {
 
 		super();
 
 		this.sudokuPanel = sudokuPanel;
+		this.mainFrame = mainFrame;
 		
 		ResourceBundle bundle = ResourceBundle.getBundle("intl/UIExportLine");
 
@@ -59,7 +61,7 @@ public class UIExportLine extends JFrame implements ActionListener {
 
 	@Override
 	public void setVisible(boolean isVisible) {
-
+		setLocationRelativeTo(mainFrame);
 		super.setVisible(isVisible);
 
 		if (isVisible) {

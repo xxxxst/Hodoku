@@ -76,6 +76,7 @@ public class HistoryDialog extends javax.swing.JDialog {
 
 		previewCheckBox.setSelected(Options.getInstance().isHistoryPreview());
 
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(okButton);
 
 		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);

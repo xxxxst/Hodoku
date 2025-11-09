@@ -61,6 +61,12 @@ public class UIImportLine extends JFrame implements ActionListener, WindowListen
 		this.repaint();
 	}
 
+	@Override
+	public void setVisible(boolean visible) {
+		setLocationRelativeTo(mainFrame);
+		super.setVisible(visible);
+	}
+
 	public void focusCursor() {
 		this.textField.requestFocus();
 	}

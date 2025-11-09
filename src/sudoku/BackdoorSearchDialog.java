@@ -85,6 +85,7 @@ public class BackdoorSearchDialog extends javax.swing.JDialog implements Runnabl
 
 		this.sudokuPanel = sudokuPanel;
 
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(startButton);
 
 		singlesListModel = new DefaultListModel<String>();

@@ -177,6 +177,7 @@ public class ExtendedPrintProgressDialog extends javax.swing.JDialog implements 
 			boolean printRating, boolean allBlack, boolean printBooklet, boolean manualDuplex) {
 		super(parent, modal);
 		initComponents();
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(cancelButton);
 		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);
 		Action escapeAction = new AbstractAction() {

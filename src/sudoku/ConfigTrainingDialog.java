@@ -51,6 +51,7 @@ public class ConfigTrainingDialog extends javax.swing.JDialog {
 
 		okPressed = false;
 
+		setLocationRelativeTo(parent);
 		getRootPane().setDefaultButton(okButton);
 
 		KeyStroke escapeKeyStroke = KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false);

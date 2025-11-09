@@ -1,0 +1,202 @@
+<!-- 
+/*
+ * Copyright (C) 2008-12  Bernhard Hobiger
+ *
+ * This file is part of HoDoKu.
+ *
+ * HoDoKu is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * HoDoKu is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with HoDoKu. If not, see <http://www.gnu.org/licenses/>.
+ */
+    Document   : keyboard_default
+    Created on : 13.12.2008, 10:34:00
+    Author     : hobiwan
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <style type="text/css" media="all">
+    <!--
+    body {
+        font-family: simsun, Arial, sans-serif;
+        font-size: 12pt;
+        line-height: 25pt;
+    }
+
+    h1 {
+        font-size: 14pt;
+        font-weight: bold;
+        /*text-align: center;
+        margin: 0 auto; */
+    }
+
+    dt {
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    dd {
+        margin: 5px;
+        margin-left: 40px;
+        margin-bottom: 10px;
+    }
+    -->
+    </style>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <h1>正常操作</h1>
+    <dl>
+        <dt>使用鼠标(正常操作)</dt>
+        <dd>单击单元格即可选中该单元格。按住 [Ctrl] 或 [Shift] 键并单击，即可
+        选中一个单元格区域。设置单元格/候选单元格：
+        <ul>
+            <li>双击候选者将其设置在单元格中</li>
+            <li>如果某个单元格只剩下一名候选者，请双击该单元格
+            在单元格中设置该候选者</li>
+            <li>如果应用了过滤器，双击已过滤的单元格可设置
+            过滤单元格中的候选者（如果它是隐藏单项）</li>
+            <li>双击候选对象，同时按 [ctrl] 可切换候选对象</li>
+        </ul>
+        </dd>
+        <dt>使用鼠标（备用鼠标模式）</dt>
+        <dd>如上所述选择区域。设置单元格/候选：
+        <ul>
+            <li>左键单击候选者将其设置在单元格中</li>
+            <li>如果单元格只剩下一名候选者，请左键单击单元格中的空白区域
+            在单元格中设置该候选者</li>
+            <li>如果应用了过滤器，左键单击过滤单元格中的空白区域可设置
+            过滤单元格中的候选者（如果它是隐藏单项）</li>
+            <li>右键单击候选消除该候选，右键单击空白
+            单元格中的空间启用相应的候选</li>
+        </ul>
+        </dd>
+        <dt>使用鼠标（着色模式）</dt>
+        <dd>单击状态栏中的颜色或激活“活动单元格”视图
+        着色模式。单击单元格/候选区域可切换所选颜色
+        该单元格/候选人。按 [X] 将主色与辅助色交换。 
+        单击背景颜色或按 [esc] 结束着色模式。点击
+        带有“R”的面板结束着色模式并删除所有颜色。 
+        </dd>
+        <dt>[left], [up], [right], [down]</dt>
+        <dd>移动光标（突出显示的单元格）。</dd>
+        <dt>[shift][left], [shift][up], [shift][right], [shift][down]</dt>
+        <dd>扩大所选单元格的范围。</dd>
+        <dt>[shift][ctrl][left], [shift][ctrl][up], [shift][ctrl][right], [shift][ctrl][down]</dt>
+        <dd>如果应用过滤器，光标将移动到下一个未解决的单元格，
+        包含过滤后的候选者。</dd>
+        <dt>[ctrl][left], [ctrl][up], [ctrl][right], [ctrl][down]</dt>
+        <dd>将光标移动到下一个未解决的单元格。</dd>
+        <dt>[home]</dt>
+        <dd>将光标移动到最左边的列。</dd>
+        <dt>[end]</dt>
+        <dd>将光标移动到最右边的列。</dd>
+        <dt>[ctrl][home]</dt>
+        <dd>将光标移动到最上面一行。</dd>
+        <dt>[ctrl][end]</dt>
+        <dd>将光标移动到最底行。</dd>
+        <dt>[1] ... [9]</dt>
+        <dd>设置突出显示单元格中的值；给定（以黑色显示）
+        无法被覆盖。</dd>
+        <dt>[Ctrl][1] ... [Ctrl][9]</dt>
+        <dd>切换突出显示单元格中的候选者。</dd>
+        <dt>[blank]</dt>
+        <dd>如果设置了过滤器（见下文），则会切换过滤后的候选者。</dd>
+        <dt>[del]、[backspace]、[0]</dt>
+        <dd>删除单元格中的值（给定的值无法删除）。</dd>
+    </dl>
+    <h1>过滤器</h1>
+    <p>过滤器有两种类型：显示所有允许放置过滤器的单元格
+    某些数字（单元格为绿色）或显示所有禁止的单元格
+    一个数字（单元格为红色）。</p>
+    <dl>
+        <dt>[F1] ... [F9]</dt>
+        <dd>设置/切换过滤的数字。</dd>
+        <dt>[shift][F1] ... [shift][F9]</dt>
+        <dd>设置/切换过滤的数字并切换过滤模式（允许/禁止）。</dd>
+        <dt>[ctrl][F1] ... [ctrl][F9]</dt>
+        <dd>在已过滤的候选集中添加/删除候选。如果有超过一名候选人
+        选择进行过滤，要么显示包含至少一个过滤候选的所有单元格（“OR”），
+        或者仅显示包含所有已过滤候选者（“AND”）的单元格。</dd>
+        <dt>[space]</dt>
+        <dd>如果过滤器处于活动状态并且当前单元格已被过滤，则在单元格中切换已过滤的候选对象。</dd>
+        <dt>[enter]</dt>
+        <dd>如果过滤器处于活动状态并且当前单元格被过滤，则在单元格中设置过滤后的候选。</dd>
+        <dt>[>], [.]</dt>
+        <dd>如果过滤器处于活动状态，请设置下一个数字。</dd>
+        <dt>[<], [,]</dt>
+        <dd>如果过滤器处于活动状态，请设置前一个数字。</dd>
+    </dl>
+    <h1>着色</h1>
+    <dl>
+        <dt>[a]/[A]、[b]/[B]、[c]/[C]、[d]/[D]、[e]/[E]</dt>
+        <dd>设置/切换所选单元格的背景颜色。</dd>
+        <dt>[r]</dt>
+        <dd>重置所有单元格的背景。</dd>
+    </dl>
+    <h1>其他</h1>
+    <dl>
+    <dt>[shift][ctrl]</dt>
+        <dd>在具有焦点的单元格中显示所有可能的候选项（仅当“选项|显示所有候选项”时）
+        未设置）。</dd>
+        <dt>[shift][alt]</dt>
+        <dd>显示所有单元格中所有可能的候选项（仅当“选项|显示所有候选项”时）
+        未设置）。</dd>
+    </dl>
+    <h1>菜单和对话框</h1>
+    <dl>
+        <dt>[ctrl][n]</dt>
+        <dd>创建新的随机数独。</dd>
+        <dt>[ctrl][o]</dt>
+        <dd>打开拼图文件。</dd>
+        <dt>[ctrl][s]</dt>
+        <dd>保存数独。</dd>
+        <dt>[ctrl][p]</dt>
+        <dd>打印数独。</dd>
+        <dt>[替代][x]</dt>
+        <dd>退出程序。</dd>
+        <dt>[ctrl][z]</dt>
+        <dd>撤消。</dd>
+        <dt>[ctrl][y]</dt>
+        <dd>重做。</dd>
+        <dt>[ctrl][c]</dt>
+        <dd>将候选人复制到剪贴板。</dd>
+        <dt>[ctrl][g]</dt>
+        <dd>将给定复制到剪贴板。</dd>
+        <dt>[ctrl][v]</dt>
+        <dd>从剪贴板粘贴数独。</dd>
+        <dt>[ctrl][r]</dt>
+        <dd>重新启动游戏。</dd>
+        <dt>[ctrl][shift][p]</dt>
+        <dd>编辑首选项。</dd>
+        <dt>[ctrl][shift][1] ... [ctrl][shift][5]</dt>
+        <dd>为新创建的数独设置难度级别（1 ...简单到5 .. 极限）。</dd>
+        <dt>[alt][F12]</dt>
+        <dd>显示模糊提示。</dd>
+        <dt>[ctrl][F12]</dt>
+        <dd>显示具体提示。</dd>
+        <dt>[F12]</dt>
+        <dd>显示下一步。</dd>
+        <dt>[F11]</dt>
+        <dd>设置所有单曲。</dd>
+        <dt>[ctrl][shift][s]</dt>
+        <dd>仅显示数独。</dd>
+        <dt>[ctrl][shift][u]</dt>
+        <dd>显示用于解决数独的步骤摘要。</dd>
+        <dt>[ctrl][shift][o]</dt>
+        <dd>显示解决方案。</dd>
+        <dt>[ctrl][shift][a]</dt>
+        <dd>显示当前状态的所有可能步骤。</dd>
+    </dl>
+  </body>
+</html>

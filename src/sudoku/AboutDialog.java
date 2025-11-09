@@ -50,6 +50,7 @@ public class AboutDialog extends javax.swing.JDialog {
 		super(parent, modal);
 		initComponents();
 
+		setLocationRelativeTo(parent);
 		versionLabel.setText(MainFrame.VERSION);
 		getRootPane().setDefaultButton(closeButton);
 

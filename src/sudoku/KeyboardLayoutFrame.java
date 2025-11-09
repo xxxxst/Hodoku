@@ -39,8 +39,9 @@ public class KeyboardLayoutFrame extends javax.swing.JFrame {
 	private static final long serialVersionUID = 1L;
 
 	/** Creates new form KeyboardLayoutFrame */
-	public KeyboardLayoutFrame() {
+	public KeyboardLayoutFrame(java.awt.Frame parent) {
 		initComponents();
+		setLocationRelativeTo(parent);
 
 		URL helpUrl = getClass().getResource("/help/keyboard.html");
 		String language = Locale.getDefault().getLanguage().toLowerCase();
