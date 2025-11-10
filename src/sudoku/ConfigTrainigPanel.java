@@ -107,7 +107,7 @@ public class ConfigTrainigPanel extends javax.swing.JPanel {
 
 		chosenTextArea.setColumns(20);
 		chosenTextArea.setEditable(false);
-		chosenTextArea.setFont(new java.awt.Font("SansSerif", 0, 12));
+		chosenTextArea.setFont(new java.awt.Font(chosenTextArea.getFont().getName(), 0, 12));
 		chosenTextArea.setLineWrap(true);
 		chosenTextArea.setRows(5);
 		chosenTextArea.setWrapStyleWord(true);

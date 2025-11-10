@@ -383,14 +383,14 @@ public class MainFrame extends javax.swing.JFrame implements FlavorListener {
 		outerSplitPane.getActionMap().getParent().remove("toggleFocus");
 
 		// change hintTextArea font to a proportional font
-		String fontName = "Arial";
+		String fontName = hinweisTextArea.getFont().getName();
 		if (!Options.getInstance().checkFont(fontName)) {
 			fontName = Font.SANS_SERIF;
 		}
 		
 		Font font = hinweisTextArea.getFont();
 
-		// font = new Font(fontName, font.getStyle(), editMenu.getFont().getSize());
+		font = new Font(fontName, font.getStyle(), editMenu.getFont().getSize());
 		hinweisTextArea.setFont(font);
 
 		// status line fonts are a bit larger than default in Windows LAF

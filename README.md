@@ -1,3 +1,11 @@
+
+base on:
+
+- https://github.com/PseudoFish/Hodoku
+- https://github.com/zh3305/HoDoKu
+
+---
+
 Hodoku is a solver/generator/trainer/analyzer for standard sudoku. It is written in
 Java/Swing and should therefore run on any platform supported by Java (tested
 on Windows and Linux - Ubuntu/GTK+-LAF). Since it is written in Java the
